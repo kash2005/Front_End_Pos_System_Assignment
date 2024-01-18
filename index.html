@@ -143,9 +143,9 @@
                     <tr>
                         <th class="bg-dark text-light" scope="col">ID</th>
                         <th class="bg-dark text-light" scope="col">Customer Name</th>
-                        <th class="bg-dark text-light" scope="col">City</th>
+                        <th class="bg-dark text-light" scope="col">Address</th>
+                        <th class="bg-dark text-light" scope="col">Contact</th>
                         <th class="bg-dark text-light" scope="col">Email</th>
-                        <th class="bg-dark text-light" scope="col">Action</th>
                     </tr>
                     </thead>
                     <tbody id="customer-table-body"></tbody>
@@ -172,11 +172,15 @@
                             <input type="text" class="form-control" id="customerName">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="city">Check me out</label>
-                            <input type="text" class="form-control" id="city">
+                            <label class="form-label" for="customerAddress">Customer Address :</label>
+                            <input type="text" class="form-control" id="customerAddress">
                         </div>
                         <div class="mb-3">
-                            <label for="customerEmail" class="form-label">Email :</label>
+                            <label class="form-label" for="customerContact">Customer Contact :</label>
+                            <input type="text" class="form-control" id="customerContact">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerEmail" class="form-label">Customer Email :</label>
                             <input type="email" class="form-control" id="customerEmail">
                         </div>
                     </form>
