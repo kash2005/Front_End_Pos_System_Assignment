@@ -52,6 +52,9 @@ export class User_api{
                         const loadingScreen3 = $('#customer_form');
                         loadingScreen3.hide();
 
+                        const loadingScreen4 = $('#item_form');
+                        loadingScreen4.hide();
+
 
                     }
                 },
