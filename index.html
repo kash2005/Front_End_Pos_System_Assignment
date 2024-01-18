@@ -106,7 +106,7 @@
                             <a class="nav-link mx-lg-2" href="#" id="customer">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Item</a>
+                            <a class="nav-link mx-lg-2" href="#" id="item">Item</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="#">Order</a>
@@ -127,9 +127,131 @@
 </main>
 
 <main id="customer_form">
-    <h1>fggggag</h1>
+    <div class="container-fluid">
+
+        <div class="container customer-card card col-12 mt-5">
+            <div class="card-body">
+                <div class="container row">
+                    <h1 class="col-9">Customer Details</h1>
+                    <button id="addBtn" type="button" class="btn add-new-customerBtn btn-success  col-2 ms-4 h-25 mt-3 align-items-end justify-content-end" data-bs-toggle="modal" data-bs-target="#customerModal"><i class="fa-solid fa-plus"></i>
+                        Add Customer
+                    </button>
+                </div>
+
+                <table class="table table-hover mt-3">
+                    <thead>
+                    <tr>
+                        <th class="bg-dark text-light" scope="col">ID</th>
+                        <th class="bg-dark text-light" scope="col">Customer Name</th>
+                        <th class="bg-dark text-light" scope="col">City</th>
+                        <th class="bg-dark text-light" scope="col">Email</th>
+                        <th class="bg-dark text-light" scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customer-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="customerFormHeading">Add New Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="customerId" class="form-label">Customer ID :</label>
+                            <input type="text" class="form-control" id="customerId">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Customer Name :</label>
+                            <input type="text" class="form-control" id="customerName">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="city">Check me out</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerEmail" class="form-label">Email :</label>
+                            <input type="email" class="form-control" id="customerEmail">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
+<!--<main id="item_form">-->
+<!--    <div class="container-fluid">-->
+
+<!--        <div class="container customer-card card col-12 mt-5">-->
+<!--            <div class="card-body">-->
+<!--                <div class="container row">-->
+<!--                    <h1 class="col-9">Item Details</h1>-->
+<!--                    <button id="addBtn2" type="button" class="btn add-new-customerBtn btn-success  col-2 ms-4 h-25 mt-3 align-items-end justify-content-end" data-bs-toggle="modal" data-bs-target="#itemModal"><i class="fa-solid fa-plus"></i>-->
+<!--                        Add Item-->
+<!--                    </button>-->
+<!--                </div>-->
+
+<!--                <table class="table table-hover mt-3">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th class="bg-dark text-light" scope="col">Code</th>-->
+<!--                        <th class="bg-dark text-light" scope="col">Description</th>-->
+<!--                        <th class="bg-dark text-light" scope="col">Qty</th>-->
+<!--                        <th class="bg-dark text-light" scope="col">Price</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody id="item-table-body"></tbody>-->
+<!--                </table>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModelLabel" aria-hidden="true">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h1 class="modal-title fs-5" id="itemFormHeading">Add New Item</h1>-->
+<!--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <form>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="itemCode" class="form-label">Item Code :</label>-->
+<!--                            <input type="text" class="form-control" id="itemCode">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="itemDescription" class="form-label">Item Description :</label>-->
+<!--                            <input type="text" class="form-control" id="itemDescription">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="qty">Qty</label>-->
+<!--                            <input type="text" class="form-control" id="qty">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="price" class="form-label">Price :</label>-->
+<!--                            <input type="text" class="form-control" id="price">-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--                    <button type="button" class="btn btn-primary">Save Item</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
 
 <script src="assets/script/lib/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
