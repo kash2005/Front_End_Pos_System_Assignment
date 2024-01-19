@@ -9,6 +9,8 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
 </head>
 <body>
@@ -143,9 +145,9 @@
                     <tr>
                         <th class="bg-dark text-light" scope="col">ID</th>
                         <th class="bg-dark text-light" scope="col">Customer Name</th>
-                        <th class="bg-dark text-light" scope="col">Address</th>
-                        <th class="bg-dark text-light" scope="col">Contact</th>
+                        <th class="bg-dark text-light" scope="col">City</th>
                         <th class="bg-dark text-light" scope="col">Email</th>
+                        <th class="bg-dark text-light" scope="col">Action</th>
                     </tr>
                     </thead>
                     <tbody id="customer-table-body"></tbody>
@@ -164,30 +166,26 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="customerId" class="form-label">Customer ID :</label>
-                            <input type="text" class="form-control" id="customerId">
+                            <label for="customer_id" class="form-label">Customer ID :</label>
+                            <input type="text" class="form-control" id="customer_id">
                         </div>
                         <div class="mb-3">
                             <label for="customerName" class="form-label">Customer Name :</label>
                             <input type="text" class="form-control" id="customerName">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="customerAddress">Customer Address :</label>
-                            <input type="text" class="form-control" id="customerAddress">
+                            <label class="form-label" for="city">Customer City :</label>
+                            <input type="text" class="form-control" id="city">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="customerContact">Customer Contact :</label>
-                            <input type="text" class="form-control" id="customerContact">
-                        </div>
-                        <div class="mb-3">
-                            <label for="customerEmail" class="form-label">Customer Email :</label>
+                            <label for="email" class="form-label">Customer Email :</label>
                             <input type="email" class="form-control" id="customerEmail">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Customer</button>
+                    <button type="button" class="btn btn-primary" id="saveUpdateBtn">Save Customer</button>
                 </div>
             </div>
         </div>
@@ -264,8 +262,8 @@
 <script src="assets/script/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
 <script src="controller/user.js" type="module"></script>
+<script type="module" src="controller/customer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
 </body>
 </html>
 
